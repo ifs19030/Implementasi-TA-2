@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pembuatan Denah Kamar</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+        integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous" />
+    <link rel="stylesheet" href="../static/style.css" />
+</head>
+
+<body>
+    <div class="container home">
+        <!-- judul -->
+        <div class="title row justify-content-center">
+            <div class="col-8 text-center">
+                <h1>
+                    Optimasi Denah Kamar Menggunakan Algoritma Genetika
+                </h1>
+            </div>
+            <div class="col-2 text-center">
+                <img class="logo-img" src="../static/img/itdel.png" alt="IT Del" />
+            </div>
+        </div>
+        <!-- pilih asrama -->
+        <div class="box mt-4 mb-4">
+            <form action="/best_solution" method="POST" enctype="multipart/form-data">
+                <div class="row justify-content-center">
+                    <div class="col-12 col-md-6 mt-3">
+                        <div class="form-group">
+                            <label for="id_asrama">Pilih Asrama</label>
+                            <select class="form-control" name="id_asrama" id="id_asrama" required>
+                                <option value="">--</option>
+                                <option value="0">Pniel</option>
+                                <option value="1">Antiokia</option>
+                                <option value="2">Kapernaum</option>
+                                <option value="3">Silo</option>
+                                <option value="4">Mambre</option>
+                                <option value="5">Mahanaim</option>
+                                <option value="6">Nazareth</option>
+                                <option value="7">Kana</option>
+                            </select>
+                        </div>
+                        <!-- Tambahkan input baru untuk mengunggah file CSV -->
+                        <div class="form-group">
+                            <label for="csv_file">Unggah File CSV (mahasiswa)</label>
+                            <input type="file" class="form-control-file" id="csv_file" name="csv_file" accept=".csv" required>
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-12 col-md-6 mt-3">
+                        <button class="submit-btn" type="submit">Lakukan Optimasi Denah Kamar</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
